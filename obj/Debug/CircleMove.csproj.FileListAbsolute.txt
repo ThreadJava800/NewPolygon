@@ -1,0 +1,10 @@
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\bin\Debug\CircleMove.exe.config
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\bin\Debug\CircleMove.exe
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\bin\Debug\CircleMove.pdb
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.csprojAssemblyReference.cache
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.Form1.resources
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.Properties.Resources.resources
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.csproj.GenerateResource.cache
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.csproj.CoreCompileInputs.cache
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.exe
+C:\Users\Владимир\source\repos\CircleMove\CircleMove\obj\Debug\CircleMove.pdb

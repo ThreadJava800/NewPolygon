@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleDraw", "CircleDraw.csproj", "{67CCBEBA-AEE6-4FF3-B3AB-17DA514047EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67CCBEBA-AEE6-4FF3-B3AB-17DA514047EF}.Debug|x86.ActiveCfg = Debug|x86
+		{67CCBEBA-AEE6-4FF3-B3AB-17DA514047EF}.Debug|x86.Build.0 = Debug|x86
+		{67CCBEBA-AEE6-4FF3-B3AB-17DA514047EF}.Release|x86.ActiveCfg = Release|x86
+		{67CCBEBA-AEE6-4FF3-B3AB-17DA514047EF}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F705AE43-80F1-4C33-8787-489C0C8C70E3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\bin\Debug\WindowsApplication.exe.config
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\bin\Debug\WindowsApplication.exe
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\bin\Debug\WindowsApplication.pdb
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\CircleMove.csprojAssemblyReference.cache
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\CircleMove.Form1.resources
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\CircleMove.Properties.Resources.resources
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\CircleMove.csproj.GenerateResource.cache
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\CircleMove.csproj.CoreCompileInputs.cache
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\WindowsApplication.exe
+C:\Users\Владимир\source\repos\CircleDraw-master\CircleDraw-master\obj\x86\Debug\WindowsApplication.pdb
