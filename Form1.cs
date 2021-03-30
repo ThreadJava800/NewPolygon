@@ -494,16 +494,21 @@ namespace CircleMove
         {
             foreach(Figure figure in figures)
             {
-                figure.Draw(e);
+                if (figure != null)
+                    figure.Draw(e);
             }
             if (figures.Count >= 3)
             {
                 List<Point> allFigurePoints = new List<Point>();
                 foreach (Figure figure in figures)
                 {
-                    allFigurePoints.Add(figure.GetPoint());
+                    if (figure != null)
+                        allFigurePoints.Add(figure.GetPoint());
                 }
-                polygon = new MPolygon(allFigurePoints);
+                if (allFigurePoints.Count >= 3)
+                    polygon = new MPolygon(allFigurePoints);
+                else
+                    polygon = null;
             }
             else
                 polygon = null;
@@ -522,12 +527,15 @@ namespace CircleMove
                 bool isPolygonMoving = true;
                 foreach (Figure figure in figures)
                 {
-                    if (figure.IsInside(e.Location))
+                    if (figure != null)
                     {
-                        currentFigure.Add(figure);
-                        areDrawing = false;
-                        shallRefresh = true;
-                        isPolygonMoving = false;
+                        if (figure.IsInside(e.Location))
+                        {
+                            currentFigure.Add(figure);
+                            areDrawing = false;
+                            shallRefresh = true;
+                            isPolygonMoving = false;
+                        }
                     }
                 }
                 if (isPolygonMoving)
@@ -577,12 +585,15 @@ namespace CircleMove
                 List<Figure> figures_to_delete = new List<Figure>();
                 foreach (Figure figure in figures)
                 {
-                    if (figure.IsInside(e.Location))
+                    if (figure != null)
                     {
-                        figures_to_delete.Add(figure);
-                        delChanges.Add(new DeletePoint(figures.IndexOf(figure), this, figure));
-                        are_deleting_polygon = false;
-                        is_saved = false;
+                        if (figure.IsInside(e.Location))
+                        {
+                            figures_to_delete.Add(figure);
+                            delChanges.Add(new DeletePoint(figures.IndexOf(figure), this, figure));
+                            are_deleting_polygon = false;
+                            is_saved = false;
+                        }
                     }
                 }
                 for(int i = 0; i < figures_to_delete.Count; i++)
@@ -600,8 +611,7 @@ namespace CircleMove
                             for (int i = 0; i < figures.Count; i++)
                             {
                                 delChanges.Add(new DeletePoint(old_list.IndexOf(figures[i]), this, figures[i]));
-                                figures.RemoveAt(i);
-                                i--;
+                                figures[i] = null;
                                 is_saved = false;
                             }
                         }
@@ -638,7 +648,8 @@ namespace CircleMove
                 var allFigurePoints = new List<Point>();
                 foreach(Figure figure in figures)
                 {
-                    allFigurePoints.Add(figure.GetPoint());
+                    if(figure != null)
+                        allFigurePoints.Add(figure.GetPoint());
                 }
                 polygon = new MPolygon(allFigurePoints);
                 this.Refresh();
@@ -653,13 +664,15 @@ namespace CircleMove
                 var old_list = figures;
                 for (int i = 0; i < figures.Count; i++)
                 {
-                    if (!polygon.polygonPoints.Contains(figures[i].GetPoint()))
+                    if (figures[i] != null)
                     {
-                        if (stepCounter > 0)
-                            delChanges.Add(new DeletePoint(old_list.IndexOf(figures[i]), this, figures[i]));
-                        figures.RemoveAt(i);
-                        i--;
-                        is_saved = false;
+                        if (!polygon.polygonPoints.Contains(figures[i].GetPoint()))
+                        {
+                            if (stepCounter > 0)
+                                delChanges.Add(new DeletePoint(old_list.IndexOf(figures[i]), this, figures[i]));
+                            figures[i] = null;
+                            is_saved = false;
+                        }
                     }
                 }
                 this.Refresh();

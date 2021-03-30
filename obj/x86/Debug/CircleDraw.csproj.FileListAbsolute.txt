@@ -73,3 +73,14 @@ C:\Users\Abubakirov.Vladimir\source\repos\Polygon\obj\x86\Debug\CircleDraw.cspro
 C:\Users\Abubakirov.Vladimir\source\repos\Polygon\obj\x86\Debug\CircleDraw.csproj.CoreCompileInputs.cache
 C:\Users\Abubakirov.Vladimir\source\repos\Polygon\obj\x86\Debug\WindowsApplication.exe
 C:\Users\Abubakirov.Vladimir\source\repos\Polygon\obj\x86\Debug\WindowsApplication.pdb
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\bin\Debug\WindowsApplication.exe.config
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\bin\Debug\WindowsApplication.exe
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\bin\Debug\WindowsApplication.pdb
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.csprojAssemblyReference.cache
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleMove.Form1.resources
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.Properties.Resources.resources
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.RadiusChangerForm.resources
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.csproj.GenerateResource.cache
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.csproj.CoreCompileInputs.cache
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\WindowsApplication.exe
+C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\WindowsApplication.pdb

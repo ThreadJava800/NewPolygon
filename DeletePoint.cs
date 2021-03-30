@@ -19,13 +19,13 @@ namespace CircleDraw
 
         public override void Redo()
         {
-            form.figures.Remove(shape);
+            form.figures[id] = null;
             form.Refresh();
         }
 
         public override void Undo()
         {
-            form.figures.Insert(form.figures.Count - id, shape);
+            form.figures[id] = shape;
             form.Refresh();
         }
     }

@@ -19,7 +19,6 @@ namespace CircleDraw
             : base(0, 0)
         {
             lines = new List<List<Point>>();
-            Console.WriteLine(isJarvis);
             if (isJarvis)
             {
                 polygonPoints = CreatePolygonJarvis(points); //Jarvis
