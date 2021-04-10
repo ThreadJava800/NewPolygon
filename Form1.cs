@@ -347,7 +347,7 @@ namespace CircleMove
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream fs = new FileStream(file_name, FileMode.OpenOrCreate);
-            object[] data = { figures.ToArray(), Figure.radius, Figure.insideColor, Figure.outsideColor };
+            object[] data = { GetNonNullList().ToArray(), Figure.radius, Figure.insideColor, Figure.outsideColor };
             bf.Serialize(fs, data);
             fs.Close();
             is_saved = true;
@@ -365,6 +365,9 @@ namespace CircleMove
             fs.Close();
             saverFilePath = file_name;
             is_saved = true;
+            historyBack = new Stack<List<Change>>();
+            historyForward = new Stack<List<Change>>();
+            EnableUndoRedoButtons();
             this.Refresh();
         }
 
@@ -445,11 +448,36 @@ namespace CircleMove
             Figure.radius = e.radius;
             for(int i = 0; i < figures.Count; i++)
             {
-                figures[i].x = figures[i].x - (e.radius / 2 - e.prevRadius / 2);
-                figures[i].y = figures[i].y - (e.radius / 2 - e.prevRadius / 2);
-                is_saved = false;
+                if (figures[i] != null)
+                {
+                    figures[i].x = figures[i].x - (e.radius / 2 - e.prevRadius / 2);
+                    figures[i].y = figures[i].y - (e.radius / 2 - e.prevRadius / 2);
+                    is_saved = false;
+                }
             }
             this.Refresh();
+        }
+
+        private int GetNonNullElementCount(List<Figure> data)
+        {
+            int counter = 0;
+            foreach (Figure val in data)
+            {
+                if (val != null)
+                    counter++;
+            }
+            return counter;
+        }
+
+        private List<Figure> GetNonNullList()
+        {
+            List<Figure> answer = new List<Figure>();
+            foreach (Figure value in figures)
+            {
+                if (value != null)
+                    answer.Add(value);
+            }
+            return answer;
         }
 
         public void OnChange(List<Change> e)
@@ -497,7 +525,7 @@ namespace CircleMove
                 if (figure != null)
                     figure.Draw(e);
             }
-            if (figures.Count >= 3)
+            if (GetNonNullElementCount(figures) >= 3)
             {
                 List<Point> allFigurePoints = new List<Point>();
                 foreach (Figure figure in figures)
@@ -546,8 +574,11 @@ namespace CircleMove
                         {
                             foreach (Figure figure in figures)
                             {
-                                figure.OnPolygonMove(e.Location);
-                                currentFigure.Add(figure);
+                                if (figure != null)
+                                {
+                                    figure.OnPolygonMove(e.Location);
+                                    currentFigure.Add(figure);
+                                }
                             }
                             shallRefresh = true;
                             areDrawing = false;
@@ -582,24 +613,18 @@ namespace CircleMove
             if(e.Button == MouseButtons.Right)
             {
                 bool are_deleting_polygon = true;
-                List<Figure> figures_to_delete = new List<Figure>();
-                foreach (Figure figure in figures)
+                for (int i = 0; i < figures.Count; i++)
                 {
-                    if (figure != null)
+                    if (figures[i] != null)
                     {
-                        if (figure.IsInside(e.Location))
+                        if (figures[i].IsInside(e.Location))
                         {
-                            figures_to_delete.Add(figure);
-                            delChanges.Add(new DeletePoint(figures.IndexOf(figure), this, figure));
+                            delChanges.Add(new DeletePoint(i, this, figures[i]));
+                            figures[i] = null;
                             are_deleting_polygon = false;
                             is_saved = false;
                         }
                     }
-                }
-                for(int i = 0; i < figures_to_delete.Count; i++)
-                {
-                    figures.Remove(figures_to_delete[i]);
-                    is_saved = false;
                 }
                 if (are_deleting_polygon)
                 {
@@ -610,14 +635,17 @@ namespace CircleMove
                             var old_list = figures;
                             for (int i = 0; i < figures.Count; i++)
                             {
-                                delChanges.Add(new DeletePoint(old_list.IndexOf(figures[i]), this, figures[i]));
-                                figures[i] = null;
-                                is_saved = false;
+                                if (figures[i] != null)
+                                {
+                                    delChanges.Add(new DeletePoint(old_list.IndexOf(figures[i]), this, figures[i]));
+                                    figures[i] = null;
+                                    is_saved = false;
+                                }
                             }
                         }
                     }
                 }
-                if(figures.Count < 3)
+                if(GetNonNullElementCount(figures) < 3)
                 {
                     polygon = null;
                 }
@@ -643,7 +671,7 @@ namespace CircleMove
                 }
             }
             areDrawing = true;
-            if(figures.Count >= 3)
+            if(GetNonNullElementCount(figures) >= 3)
             {
                 var allFigurePoints = new List<Point>();
                 foreach(Figure figure in figures)

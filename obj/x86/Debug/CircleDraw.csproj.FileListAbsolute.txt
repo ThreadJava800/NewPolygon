@@ -84,3 +84,14 @@ C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.cs
 C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\CircleDraw.csproj.CoreCompileInputs.cache
 C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\WindowsApplication.exe
 C:\Users\Abubakirov.Vladimir\source\repos\NewPolygon\obj\x86\Debug\WindowsApplication.pdb
+D:\Projects\WindowsForms\NewPolygon\bin\Debug\WindowsApplication.exe.config
+D:\Projects\WindowsForms\NewPolygon\bin\Debug\WindowsApplication.exe
+D:\Projects\WindowsForms\NewPolygon\bin\Debug\WindowsApplication.pdb
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.csprojAssemblyReference.cache
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleMove.Form1.resources
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.Properties.Resources.resources
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.RadiusChangerForm.resources
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.csproj.GenerateResource.cache
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.csproj.CoreCompileInputs.cache
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\WindowsApplication.exe
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\WindowsApplication.pdb

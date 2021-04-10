@@ -25,8 +25,11 @@ namespace CircleDraw
             radiusForm.setValue(newRad);
             for (int i = 0; i < form.figures.Count; i++)
             {
-                form.figures[i].x = form.figures[i].x - (newRad / 2 - oldRad / 2);
-                form.figures[i].y = form.figures[i].y - (newRad / 2 - oldRad / 2);
+                if (form.figures[i] != null)
+                {
+                    form.figures[i].x = form.figures[i].x - (newRad / 2 - oldRad / 2);
+                    form.figures[i].y = form.figures[i].y - (newRad / 2 - oldRad / 2);
+                }
             }
             form.Refresh();
         }
@@ -37,8 +40,11 @@ namespace CircleDraw
             radiusForm.setValue(oldRad);
             for (int i = 0; i < form.figures.Count; i++)
             {
-                form.figures[i].x = form.figures[i].x - (oldRad / 2 - newRad / 2);
-                form.figures[i].y = form.figures[i].y - (oldRad / 2 - newRad / 2);
+                if (form.figures[i] != null)
+                {
+                    form.figures[i].x = form.figures[i].x - (oldRad / 2 - newRad / 2);
+                    form.figures[i].y = form.figures[i].y - (oldRad / 2 - newRad / 2);
+                }
             }
             form.Refresh();
         }
