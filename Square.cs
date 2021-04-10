@@ -22,13 +22,6 @@ namespace CircleMove
             e.Graphics.DrawRectangle(new Pen(Figure.outsideColor), new Rectangle(x, y, Figure.radius, Figure.radius));
         }
 
-        public override void Dynamics()
-        {
-            int value = Form1.random.Next(-5, 5);
-            x += value;
-            y += value;
-        }
-
         public override Point GetPoint()
         {
             return new Point(x + Figure.radius / 2, y + Figure.radius / 2);

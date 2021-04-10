@@ -376,7 +376,11 @@ namespace CircleMove
             foreach(var point in figures)
             {
                 if (point != null)
-                    point.Dynamics();
+                {
+                    int value = random.Next(-5, 5);
+                    point.x += value;
+                    point.y += value;
+                }
             }
             this.Refresh();
             if (polygon != null)

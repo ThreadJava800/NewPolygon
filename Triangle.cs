@@ -36,16 +36,6 @@ namespace CircleMove
             e.Graphics.DrawPolygon(new Pen(Figure.outsideColor), polygonPoints.ToArray());
         }
 
-        public override void Dynamics()
-        {
-            int value = Form1.random.Next(-5, 5);
-            for (int i = 0; i < polygonPoints.Count; i++)
-            {
-                Point tmp = new Point(polygonPoints[i].X + value, polygonPoints[i].Y + value);
-                polygonPoints[i] = tmp;
-            }
-        }
-
         public override Point GetPoint()
         {
             return new Point(polygonPoints[2].X + Figure.radius / 2, polygonPoints[1].Y + Figure.radius / 2);

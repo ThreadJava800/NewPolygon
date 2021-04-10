@@ -35,6 +35,5 @@ namespace CircleMove
         public abstract void Draw(PaintEventArgs e);
         public abstract void Move(Form context, MouseEventArgs e);
         public abstract Point GetPoint();
-        public abstract void Dynamics();
     }
 }

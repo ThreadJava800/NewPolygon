@@ -259,10 +259,5 @@ namespace CircleDraw
             dy = polygonPoints[0].Y - point.Y;
             isMoving = true;
         }
-
-        public override void Dynamics()
-        {
-            
-        }
     }
 }
