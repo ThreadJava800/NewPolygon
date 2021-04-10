@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Linq;
+using PolygonLibrary;
 
 namespace CircleMove
 {

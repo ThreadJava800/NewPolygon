@@ -95,3 +95,6 @@ D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.csproj.GenerateReso
 D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.csproj.CoreCompileInputs.cache
 D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\WindowsApplication.exe
 D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\WindowsApplication.pdb
+D:\Projects\WindowsForms\NewPolygon\bin\Debug\PolygonLibrary.dll
+D:\Projects\WindowsForms\NewPolygon\bin\Debug\PolygonLibrary.pdb
+D:\Projects\WindowsForms\NewPolygon\obj\x86\Debug\CircleDraw.csproj.CopyComplete
