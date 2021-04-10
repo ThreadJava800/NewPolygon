@@ -375,17 +375,21 @@ namespace CircleMove
         {
             foreach(var point in figures)
             {
-                point.Dynamics();
+                if (point != null)
+                    point.Dynamics();
             }
             this.Refresh();
             if (polygon != null)
             {
                 for (int i = 0; i < figures.Count; i++)
                 {
-                    if (!polygon.polygonPoints.Contains(figures[i].GetPoint()))
+                    if (figures[i] != null)
                     {
-                        figures.RemoveAt(i);
-                        i--;
+                        if (!polygon.polygonPoints.Contains(figures[i].GetPoint()))
+                        {
+                            figures.RemoveAt(i);
+                            i--;
+                        }
                     }
                 }
                 this.Refresh();
